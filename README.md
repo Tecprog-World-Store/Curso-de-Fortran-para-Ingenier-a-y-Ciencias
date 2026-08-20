@@ -2,11 +2,11 @@
 ## Tecprog World E.I.R.L. — TW EDUCA
 **Edición 2026 | Windows 11 | Visual Studio Community 2026 | Intel oneAPI Base Toolkit + HPC Toolkit | Intel Fortran Compiler 2026**
 
-Este repositorio constituye la edición actualizada del curso de Fortran orientado a estudiantes, ingenieros y profesionales de ciencias que requieren desarrollar, compilar y verificar programas de cálculo científico en Windows 11. La organización mantiene la secuencia temática histórica del curso —introducción, operaciones básicas, arrays, estructuras de control, entrada/salida, funciones, subrutinas y módulos— y añade una aplicación integradora de ingeniería, evaluaciones rápidas por módulo y una evaluación final con calificación de 0 a 20.
+Este repositorio contiene la edición actualizada del curso de Fortran orientado a estudiantes, ingenieros y profesionales de ciencias que requieren desarrollar, compilar y verificar programas de cálculo científico en Windows 11. La secuencia académica comprende introducción, operaciones básicas, arrays, estructuras de control, entrada/salida, funciones, subrutinas, módulos y una aplicación integradora de ingeniería, además de evaluaciones rápidas por módulo y una evaluación final con calificación de 0 a 20.
 
-## 1. Entorno de desarrollo adoptado
+## 1. Entorno de desarrollo
 
-El curso se desarrolla con el mismo ecosistema de compilación empleado en trabajos técnicos de SWAT+:
+El curso se desarrolla con un entorno profesional de programación científica:
 
 - Windows 11 de 64 bits.
 - Visual Studio Community 2026 con herramientas de desarrollo C++.
@@ -16,9 +16,25 @@ El curso se desarrolla con el mismo ecosistema de compilación empleado en traba
 - Inicialización del entorno Intel mediante:
   `C:\Program Files (x86)\Intel\oneAPI\setvars.bat`
 
-Los scripts incluidos detectan primero `ifx` y, como compatibilidad, intentan utilizar `ifort` cuando este se encuentre disponible en la instalación. El objetivo es que cada ejemplo pueda compilarse tanto desde una consola Intel oneAPI como desde PowerShell después de cargar el entorno de compilación.
+Los scripts incluidos detectan primero `ifx` y, como compatibilidad, intentan utilizar `ifort` cuando se encuentre disponible. El objetivo es que cada ejemplo pueda compilarse desde una consola Intel oneAPI o desde PowerShell después de cargar el entorno de compilación.
 
-## 2. Resultados de aprendizaje
+## 2. Orientación del curso
+
+El curso está diseñado para aplicaciones de ingeniería y ciencias, con ejemplos que pueden extenderse a:
+
+- mecánica de fluidos;
+- hidráulica;
+- oceanografía física;
+- transferencia de calor;
+- métodos numéricos;
+- dinámica de fluidos;
+- análisis de datos científicos;
+- modelación física;
+- cálculo matricial;
+- procesamiento de series temporales;
+- simulación numérica de sistemas de ingeniería.
+
+## 3. Resultados de aprendizaje
 
 Al finalizar el curso, el participante podrá:
 
@@ -29,9 +45,9 @@ Al finalizar el curso, el participante podrá:
 5. Leer y escribir datos desde consola y archivos externos.
 6. Implementar funciones y subrutinas con interfaces claras.
 7. Organizar código reutilizable mediante módulos.
-8. Integrar los elementos anteriores en un problema de ingeniería con resultados numéricos verificables.
+8. Integrar los elementos anteriores en problemas de ingeniería con resultados numéricos verificables.
 
-## 3. Arquitectura académica
+## 4. Arquitectura académica
 
 | Módulo | Tema | Evidencia principal |
 |---|---|---|
@@ -48,17 +64,17 @@ Al finalizar el curso, el participante podrá:
 | 10 | Evaluaciones públicas | Cuestionarios y hoja de respuestas |
 | PRIVADO | Claves Tecprog World | Respuestas y utilidad de calificación |
 
-## 4. Convenciones del curso
+## 5. Convenciones del curso
 
-- Los fuentes modernos utilizan extensión `.f90`.
+- Los archivos fuente modernos utilizan extensión `.f90`.
 - Se recomienda `implicit none` en todos los programas.
 - Los ejemplos priorizan precisión, legibilidad y reproducibilidad.
 - Los resultados esperados se documentan cuando son necesarios para validar el aprendizaje.
 - La bibliografía recomendada se lista mediante referencias; no se redistribuyen libros ni archivos protegidos por derechos de autor.
 
-## 5. Compilación rápida
+## 6. Compilación rápida
 
-Abra **PowerShell** y ejecute, desde el módulo correspondiente:
+Abra PowerShell y ejecute, desde el módulo correspondiente:
 
 ```powershell
 .\compilar.ps1
@@ -78,11 +94,9 @@ o, en instalaciones que aún incluyan el compilador clásico:
 ifort programa.f90 /exe:programa.exe
 ```
 
-## 6. Sistema de evaluación
+## 7. Sistema de evaluación
 
 Cada módulo dispone de una evaluación rápida de **5 preguntas**, con **4 puntos por respuesta correcta**, para una nota máxima de **20 puntos**.
-
-Escala sugerida:
 
 | Nota | Interpretación |
 |---:|---|
@@ -92,9 +106,9 @@ Escala sugerida:
 | 17–18 | Muy buen dominio |
 | 19–20 | Dominio sobresaliente |
 
-La **evaluación final** también se califica de 0 a 20 y combina preguntas conceptuales con resultados numéricos verificables. Las claves oficiales no se incluyen en la distribución pública; se conservan en un paquete privado para Tecprog World E.I.R.L.
+La evaluación final también se califica de 0 a 20 y combina preguntas conceptuales con resultados numéricos verificables. Las claves oficiales no se incluyen en la distribución pública; se conservan en un paquete privado para Tecprog World E.I.R.L.
 
-## 7. Certificación
+## 8. Certificación
 
 Para fines de certificación empresarial se recomienda exigir:
 
@@ -104,10 +118,10 @@ Para fines de certificación empresarial se recomienda exigir:
 - registro del participante y de su calificación;
 - código interno de certificado.
 
-Ejemplo de código:
+Ejemplo:
 `TW-FORTRAN-2026-0001`
 
-## 8. Bibliografía recomendada
+## 9. Bibliografía recomendada
 
 - Metcalf, M., Reid, J., & Cohen, M. *Modern Fortran Explained*. Oxford University Press.
 - Chapman, S. J. *Fortran for Scientists and Engineers*. McGraw-Hill.
@@ -116,11 +130,11 @@ Ejemplo de código:
 - Intel. *Intel Fortran Compiler Developer Guide and Reference*.
 - Fortran-lang Community. *Fortran Programming Language — Learn and Documentation*.
 
-## 9. Licencia y uso
+## 10. Licencia y uso
 
-El código desarrollado específicamente para esta edición debe publicarse bajo la licencia elegida por Tecprog World E.I.R.L. No se recomienda copiar al nuevo repositorio libros, archivos binarios ni material editorial del repositorio histórico. Las referencias bibliográficas son únicamente recomendaciones de estudio.
+El código desarrollado específicamente para esta edición debe publicarse bajo la licencia elegida por Tecprog World E.I.R.L. No se recomienda copiar al nuevo repositorio libros, archivos binarios ni material editorial del repositorio histórico. Las referencias bibliográficas se mantienen únicamente como recomendaciones de estudio.
 
-## 10. Organización
+## 11. Organización
 
 **Tecprog World E.I.R.L. — TW EDUCA**  
 Curso: **Fortran para Ingeniería y Ciencias**  
